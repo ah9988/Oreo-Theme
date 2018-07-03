@@ -1,4 +1,4 @@
-package substratum.theme.template
+package baka.sai.oreo
 
 object AdvancedConstants {
 

@@ -5,6 +5,12 @@ import javax.crypto.SecretKey
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
+tasks.whenTaskAdded { task ->
+        if (task.name.startsWith("lint")) {
+            task.enabled = false
+        }
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: 'ThemerConstants.gradle'
@@ -23,17 +29,23 @@ android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
 
+    android.applicationVariants.all { final variant ->
+        variant.outputs.all {
+            outputFileName = "oreo-theme-v${variant.versionCode}.apk"
+        }
+    }
+
     defaultConfig {
         // If you're planning to change up the package name, ensure you have read the readme
         // thoroughly!
-        applicationId "substratum.theme.template"
+        applicationId "baka.sai.oreo"
         // We are only supporting Nougat and above, all new changes will incorporate Nougat changes
         // to the substratum repo rather than anything lower. Keep targetSdkVersion the same.
-        minSdkVersion 24
+        minSdkVersion 26
         targetSdkVersion 27
         // Both versions must be changed to increment on Play Store/user's devices
-        versionCode 2
-        versionName "2.0"
+        versionCode 9
+        versionName "nine"
 
         // Themers: Do not touch this, they will only formulate integrity structure of the core
         //          template
@@ -64,6 +76,18 @@ android {
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+    }
+    flavorDimensions "build"
+    productFlavors {
+        dev {
+            dimension "build"
+        }
+
+        donate {
+            dimension "build"
+            applicationIdSuffix ".donate"
+            versionNameSuffix "-donate"
+        }
     }
 }
 

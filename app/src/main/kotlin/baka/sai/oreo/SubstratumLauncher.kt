@@ -1,6 +1,6 @@
 @file:Suppress("ConstantConditionIf")
 
-package substratum.theme.template
+package baka.sai.oreo
 
 import android.app.Activity
 import android.content.Context
@@ -16,24 +16,24 @@ import com.github.javiersantos.piracychecker.enums.InstallerID
 import com.github.javiersantos.piracychecker.enums.PiracyCheckerCallback
 import com.github.javiersantos.piracychecker.enums.PiracyCheckerError
 import com.github.javiersantos.piracychecker.enums.PirateApp
-import substratum.theme.template.AdvancedConstants.ENFORCE_MINIMUM_SUBSTRATUM_VERSION
-import substratum.theme.template.AdvancedConstants.MINIMUM_SUBSTRATUM_VERSION
-import substratum.theme.template.AdvancedConstants.ORGANIZATION_THEME_SYSTEMS
-import substratum.theme.template.AdvancedConstants.OTHER_THEME_SYSTEMS
-import substratum.theme.template.AdvancedConstants.SHOW_DIALOG_REPEATEDLY
-import substratum.theme.template.AdvancedConstants.SHOW_LAUNCH_DIALOG
-import substratum.theme.template.AdvancedConstants.SUBSTRATUM_FILTER_CHECK
-import substratum.theme.template.ThemeFunctions.SUBSTRATUM_PACKAGE_NAME
-import substratum.theme.template.ThemeFunctions.checkSubstratumIntegrity
-import substratum.theme.template.ThemeFunctions.getSelfSignature
-import substratum.theme.template.ThemeFunctions.getSelfVerifiedIntentResponse
-import substratum.theme.template.ThemeFunctions.getSelfVerifiedPirateTools
-import substratum.theme.template.ThemeFunctions.getSelfVerifiedThemeEngines
-import substratum.theme.template.ThemeFunctions.getSubstratumFromPlayStore
-import substratum.theme.template.ThemeFunctions.getSubstratumUpdatedResponse
-import substratum.theme.template.ThemeFunctions.hasOtherThemeSystem
-import substratum.theme.template.ThemeFunctions.isCallingPackageAllowed
-import substratum.theme.template.ThemeFunctions.isPackageInstalled
+import baka.sai.oreo.AdvancedConstants.ENFORCE_MINIMUM_SUBSTRATUM_VERSION
+import baka.sai.oreo.AdvancedConstants.MINIMUM_SUBSTRATUM_VERSION
+import baka.sai.oreo.AdvancedConstants.ORGANIZATION_THEME_SYSTEMS
+import baka.sai.oreo.AdvancedConstants.OTHER_THEME_SYSTEMS
+import baka.sai.oreo.AdvancedConstants.SHOW_DIALOG_REPEATEDLY
+import baka.sai.oreo.AdvancedConstants.SHOW_LAUNCH_DIALOG
+import baka.sai.oreo.AdvancedConstants.SUBSTRATUM_FILTER_CHECK
+import baka.sai.oreo.ThemeFunctions.SUBSTRATUM_PACKAGE_NAME
+import baka.sai.oreo.ThemeFunctions.checkSubstratumIntegrity
+import baka.sai.oreo.ThemeFunctions.getSelfSignature
+import baka.sai.oreo.ThemeFunctions.getSelfVerifiedIntentResponse
+import baka.sai.oreo.ThemeFunctions.getSelfVerifiedPirateTools
+import baka.sai.oreo.ThemeFunctions.getSelfVerifiedThemeEngines
+import baka.sai.oreo.ThemeFunctions.getSubstratumFromPlayStore
+import baka.sai.oreo.ThemeFunctions.getSubstratumUpdatedResponse
+import baka.sai.oreo.ThemeFunctions.hasOtherThemeSystem
+import baka.sai.oreo.ThemeFunctions.isCallingPackageAllowed
+import baka.sai.oreo.ThemeFunctions.isPackageInstalled
 
 /**
  * NOTE TO THEMERS
